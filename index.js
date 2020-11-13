@@ -83,8 +83,10 @@ app.post('/upload', (req, res) => {
     var async_func = async function(req, res) {
         upload(req, res, (err) => {
             if (err) {
+		var searchmsg='';
                 res.render('logged', {
-                    msg: err
+                    msg: err,
+		    searchmsg:'Error:Please upload jpeg image and try again'
                 });
             } else {
                 if (req.file == undefined) {
