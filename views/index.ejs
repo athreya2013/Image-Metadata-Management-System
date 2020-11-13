@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image-Metadata-Management-System</title>
+
+    <style>
+        .welcome{
+          background: orange;
+        }
+   
+        label,
+        h1 {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-weight: 400;
+        }
+        
+        input[type=text],
+        input[type=password] {
+            width: 150px;
+            height: 19px;
+            border-radius: 1px;
+            border-style: solid;
+        }
+        .form1,.form2,.form3
+{
+display:inline-block;}
+        .add {
+            background: white;
+            width: 500px;
+            position: relative;
+            left: 6%;
+        }
+  input[type=submit] {
+            width: 150px;
+            border-radius: 1px;
+            border-color: white;
+            outline: none;
+            padding: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <div class="main">
+        
+
+            <body style="text-align: center;">
+               <h1 class="welcome">Image-Metadata-Management-System</h1>
+                <br>
+<div class="form1">
+                <h1 class="login">User Login</h1>
+
+                <%= msgTop%>
+                    <br>
+                    <form method="post" action="/item/auth">
+                        <label for="name">User Name:</label>
+                        <input type="text" name="name"><br>
+                        <br>
+
+                        <label for="name">Password:</label> &nbsp&nbsp
+                        <input type="password" name="prop"><br>
+                        <br><br>
+                        <input type="submit" value="Login">
+                    </form>
+                    <br>
+                    <br>
+</div>
+<div class="form2" float:"right";>
+
+                    <h1 class="add">New user? Sign up now!</h1>
+                    <%= msg%>
+                        <br>
+                        <form method="post" action="/item/addUser">
+                            <label for="name">User Name:</label>
+                            <input type="text" name="name"><br>
+                            <br>
+                            <label for="name">Password:</label> &nbsp&nbsp
+                            <input type="password" name="pass"><br>
+                            <br><br>
+                            <input type="submit" value="SignUp">
+                        </form>
+                        <br>
+<div>
+<div class="form3">
+
+                        <h1 class="admin">Admin Login</h1>
+                        <br>
+                        <form method="post" action="/item/authAdmin">
+                            <label for="name">User Name:</label>
+                            <input type="text" name="name"><br>
+                            <br>
+                            <label for="name">Password:</label> &nbsp&nbsp
+                            <input type="password" name="prop"><br>
+                            <br><br>
+                            <input type="submit" value="Login">
+                        </form>
+            </body>
+
+        </div>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
