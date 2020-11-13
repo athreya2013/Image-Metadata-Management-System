@@ -123,7 +123,8 @@ app.post('/item/auth', (req, res) => {
         User.count({ name: uname, pass: pass }, function(err, count) {
             if (count > 0) {
                 //document exists });
-                return res.render('logged.ejs',{msg});
+		var searchmsg='';
+                return res.render('logged.ejs',{msg,searchmsg});
             } else {
                 var msgTop = 'Invalid Username/Password';
                 var msg = '';
