@@ -163,7 +163,8 @@ app.post('/item/authAdmin', (req, res) => {
     var uname = req.body.name;
     var pass = req.body.prop;
     if (uname == 'admin' && pass == 'admin') {
-        res.redirect('/loggedIn');
+        var searchmsg='';
+	    res.render('logged.ejs',{searchmsg});
     } else {
         res.redirect('/');
     }
