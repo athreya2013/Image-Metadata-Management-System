@@ -74,6 +74,7 @@ app.get('/', (req, res) => {
 });
 app.get('/loggedIn', function(req, res) {
     var msg='';
+    var searchmsg='';
     res.render('logged.ejs',{msg});
 });
 app.post('/loggedout',(req,res) => {
